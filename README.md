@@ -40,4 +40,22 @@ Divirta-se!
 ```Shell
 docker build -t misaelgpereira/fullcycle .
 ```
-# Tamanho da imagem
+# Imagem
+```Shell
+docker images
+```
+
+# Run
+```Shell
+docker run --rm -it misaelgpereira/fullcycle
+```
+
+# Hub Push
+```Shell
+docker push misaelgpereira/fullcycle
+```
+# Hub Pull
+docker pull misaelgpereira/fullcycle
+
+
+
