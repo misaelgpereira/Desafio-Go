@@ -44,6 +44,7 @@ docker build -t misaelgpereira/fullcycle .
 ```Shell
 docker images
 ```
+![Tamanho Image](imagens/size_file.jpg)
 
 # Run
 ```Shell
