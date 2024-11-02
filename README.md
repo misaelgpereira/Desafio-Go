@@ -16,3 +16,28 @@ Suba o projeto em um repositório Git remoto e coloque o link da imagem que subi
 Compartilhe o link do repositório do Git remoto para corrigirmos seu projeto.
 
 Divirta-se!
+
+# Dockerfile
+```Dockerfile
+  FROM golang:1.19 AS builder
+  
+  WORKDIR /app
+  COPY . /app
+  
+  RUN go build -o api main.go
+  
+  FROM scratch
+  
+  WORKDIR /app
+  COPY --from=builder /app/api ./
+  
+  EXPOSE 8000
+  
+  CMD ["./api"]
+```
+
+# Build
+```Shell
+docker build -t misaelgpereira/fullcycle .
+```
+# Tamanho da imagem
